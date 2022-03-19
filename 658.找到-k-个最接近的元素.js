@@ -11,7 +11,7 @@
  * @param {number} x
  * @return {number[]}
  */
-var findClosestElements = function (arr, k, x) {
+ var findClosestElements = function (arr, k, x) {
   let l = 0
   let r = arr.length - 1
   let cur = undefined
@@ -43,10 +43,8 @@ var findClosestElements = function (arr, k, x) {
     start++;
     if (start + k == arr.length) break;
   }
-
-  ans =[start, start + k];
-
-  return ans
+  // ans =[start, start + k];
+  return arr.splice(start,k)
 
 };
 var myAbsComp = function (a, b, m) {
